@@ -1,0 +1,39 @@
+.photo-card {
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+}
+
+.photo-card__photo {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.photo-card__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-card__button {
+  width: 28px;
+  height: 22px;
+  background-image: url(../../image/like.svg);
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.photo-card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px 30px 21px;
+}

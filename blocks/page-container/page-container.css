@@ -1,0 +1,10 @@
+.page-container {
+  max-width: 882px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 320px) {
+  .page-container {
+    max-width: 286px;
+  }
+}
