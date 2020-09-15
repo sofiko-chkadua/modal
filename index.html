@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,56 +14,56 @@
 </header>
 <main class="content">
     <section class="intro">
-        <div class="intro__main-container">
-            <div class="intro__container">
-                <img class="intro__image" src="./image/jac.jpg" alt="">
-                <div class="intro__description">
-                    <h1 class="intro__title">Жак-Ив Кусто</h1>
-                    <h2 class="intro__subtitle">Исследователь океана</h2>
-                </div>
+        <div class="intro__big-container">
+        <img class="intro__image" src="./image/jac.jpg" alt="жак-ив кусто">
+        <div class="intro__container">
+            <div class="intro__profile-container">
+                <h1 class="intro__title">Жак-Ив Кусто</h1>
+                <button class="intro__edit-button"></button>
             </div>
-            <button class="intro__edit-button" id="intro__edit-button"></button>
+            <h2 class="intro__subtitle">Исследователь океана</h2>
         </div>
+    </div>
         <button class="intro__add-button"></button>
     </section>
     <section class="photo-grid">
         <div class="photo-card">
-            <img class="photo-card__photo" src="./image/karachaevsk.jpg" alt="">
+            <img class="photo-card__photo" src="./image/karachaevsk.jpg" alt="карачаевск">
             <div class="photo-card__description">
             <h2 class="photo-card__title">Карачаевск</h2>
             <button class="photo-card__button"></button>
         </div>
         </div>
         <div class="photo-card">
-            <img class="photo-card__photo" src="./image/elbrus.jpg" alt="">
+            <img class="photo-card__photo" src="./image/elbrus.jpg" alt="эльбрус">
             <div class="photo-card__description">
             <h2 class="photo-card__title">Гора Эльбрус</h2>
             <button class="photo-card__button"></button>
         </div>
         </div>
         <div class="photo-card">
-            <img class="photo-card__photo" src="./image/dombai.jpg" alt="">
+            <img class="photo-card__photo" src="./image/dombai.jpg" alt="домбай">
             <div class="photo-card__description">
             <h2 class="photo-card__title">Домбай</h2>
             <button class="photo-card__button"></button>
         </div>
         </div>
         <div class="photo-card">
-            <img class="photo-card__photo" src="./image/elbrus.jpg" alt="">
+            <img class="photo-card__photo" src="./image/elbrus.jpg" alt="эльбрус">
             <div class="photo-card__description">
             <h2 class="photo-card__title">Гора Эльбрус</h2>
             <button class="photo-card__button"></button>
         </div>
         </div>
         <div class="photo-card">
-            <img class="photo-card__photo" src="./image/dombai.jpg" alt="">
+            <img class="photo-card__photo" src="./image/dombai.jpg" alt="домбай">
             <div class="photo-card__description">
             <h2 class="photo-card__title">Домбай</h2>
             <button class="photo-card__button"></button>
         </div>
         </div>
         <div class="photo-card">
-            <img class="photo-card__photo" src="./image/karachaevsk.jpg" alt="">
+            <img class="photo-card__photo" src="./image/karachaevsk.jpg" alt="карачаевск">
             <div class="photo-card__description">
             <h2 class="photo-card__title">Карачаево-Черкессия</h2>
             <button class="photo-card__button"></button>
@@ -74,18 +74,21 @@
         <p class="footer__copywright">© 2020 Mesto Russia</p>
     </footer>
 </main>
-<div class="modal modal_closed" id="modal">
+<div class="modal modal_closed">
     <div class="modal__container">
-        <button class="modal__closed-button" id="modal__closed-button"></button>
+        <div class="modal__description">
+        <button class="modal__closed-button"></button>
       <h3 class="modal__title">Редактировать профиль</h3>
       <form class="modal__form modal__form-user" name="user">
-        <input type="text" name="userName" class="modal__input" placeholder="Имя" required>
-        <input type="text" name="userJob" class="modal__input" placeholder="О себе" required>
-        <button type='submit' class="modal__save-button" id="modal__save-button">Сохранить</button>
+        <input type="text" name="userName" class="modal__input"  placeholder="Имя" required>
+        <input type="text" name="userJob" class="modal__input modal__last-input" placeholder="О себе" required>
+        <button type='submit' class="modal__save-button">Сохранить</button>
       </form>
+    </div>
     </div>
   </div>
 </div>
 <script src="index.js"></script>
 </body>
 </html>
+

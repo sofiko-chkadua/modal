@@ -3,8 +3,8 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 928px) {
   .page-container {
-    max-width: 286px;
+    max-width: 928px;
   }
 }

@@ -3,3 +3,16 @@
   border: 1px solid #545454;
   margin-bottom: 36px;
 }
+
+@media screen and (max-width: 928px) {
+  .header {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+
+@media screen and (max-width: 928px) {
+  .header {
+    padding: 0px;
+  }
+}

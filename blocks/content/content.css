@@ -1,10 +1,13 @@
-.content {
-  margin: 0 auto;
-  max-width: 882px;
+@media screen and (max-width: 928px) {
+  .content {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
 }
 
 @media screen and (max-width: 320px) {
   .content {
-    max-width: 286px;
+    display: flex;
+    flex-direction: column;
   }
 }
