@@ -1,12 +1,16 @@
 .photo-card {
   border-radius: 10px 10px 10px 10px;
   background-color: white;
+  overflow: hidden;
 }
 
 .photo-card__photo {
-  width: 282px;
-  height: 282px;
-  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  /* width: 282px;
+  height: 282px; */
+  /* лушчe у .photo-card overflow: hidden */
 }
 
 .photo-card__title {

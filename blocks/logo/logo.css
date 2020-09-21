@@ -1,14 +1,18 @@
+/* не выставляй логотипу margin-ы , это же бэм блок, мы блокам только падинги задаем 
+в твоем случа лучше сделать для хедера минимальную высоту 125px и выровнять внеутренности через
+свойства flex контейнера
+*/
 .logo {
   width: 142px;
   height: 34px;
   margin: 0;
-  margin-top: 45px;
-  margin-bottom: 40px;
+  /* margin-top: 45px;
+  margin-bottom: 40px; */
 }
 
 @media screen and (max-width: 928px) {
   .logo {
-    margin: 28px 0 30px 26px;
+    padding-left: 26px;
   }
 }
 

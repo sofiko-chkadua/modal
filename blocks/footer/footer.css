@@ -3,15 +3,20 @@
   line-height: 22px;
   color: #545454;
   margin: 0;
-  margin-top: 66px;
-  margin-bottom: 60px;
+  min-height: 144px;
+  display: flex;
+  align-items: center;
+  /* заданий минимальнуй высоту футеру и избавься от этих марджинов */
+  /* margin-top: 66px;
+  margin-bottom: 60px; */
 }
 
 @media screen and (max-width: 320px) {
   .footer__copywright {
     font-size: 14px;
     line-height: 17px;
-    margin-top: 48px;
-    margin-bottom: 36px;
+    /* margin-top: 48px;
+    margin-bottom: 36px; */
+    min-height: 98px;
   }
 }

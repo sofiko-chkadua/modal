@@ -1,7 +1,18 @@
-.header__line {
+/* настаиваю чтобы эта пипяка была через псевдоэлемент :) */
+.header {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+justify-content: space-evenly;
+}
+
+.header:after {
+  align-self: stretch;
+  display: block;
+  content: "";
   opacity: 0.7;
   border: 1px solid #545454;
-  margin-bottom: 36px;
+  /* margin тут не часть хедера, а часть контента, сделать padding-top у content или у intro*/
 }
 
 @media screen and (max-width: 928px) {
