@@ -2,15 +2,13 @@
   border-radius: 10px 10px 10px 10px;
   background-color: white;
   overflow: hidden;
+  position: relative;
 }
 
 .photo-card__photo {
   width: 100%;
   object-fit: cover;
   height: 100%;
-  /* width: 282px;
-  height: 282px; */
-  /* лушчe у .photo-card overflow: hidden */
 }
 
 .photo-card__title {
@@ -33,6 +31,8 @@
   background-size: contain;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
+
 }
 
 .photo-card__description {
@@ -40,4 +40,23 @@
   justify-content: space-between;
   align-items: center;
   padding: 25px 15px 30px 21px;
+}
+
+.photo-card__delete {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 19px;
+  height: 19px;
+  background-image: url(../../image/delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.photo-card__button_active {
+  background-image: url(../../image/blacklike.svg);
 }
