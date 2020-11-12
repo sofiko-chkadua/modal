@@ -59,7 +59,7 @@ const cardsData = [
     text: "Perujia",
   },
   {
-    link: "./image/toskana.jpg",
+    link: "./image/Toskana.jpg",
     text: "Toskana",
   },
 
