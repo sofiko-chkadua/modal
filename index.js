@@ -81,7 +81,7 @@ const cardsData = [
     text: "Best breakfast in Umbria",
   },
   {
-    link: "./image/florence.jpg",
+    link: "./image/flor.jpg",
     text: "Florence",
   },
   {
