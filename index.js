@@ -9,35 +9,32 @@ const userJobInput = document.querySelector(".modal__input_type_job");
 const form = document.querySelector(".modal__form");
 const modalAddClosedButton = document.querySelector(".modal__closed-button_type_addcard");
 const modalAddImage = document.querySelector(".modal_type_image");
+// модалка редактирования
+const modalEdit = document.querySelector(".modal_type_edit");
 const modalAddImageClosedButton = document.querySelector(".modal__closed-button_type_image");
 
+import './index.css';
 
 // закрытие по escape
 
 const keyupHandler = function (e) {
   if (e.keyCode == 27) {
     const openModal = document.querySelector(".modal_open");
-    togglePopup(openModal);
+    // я заменила все вызовы togglePopup на вызовы toggleModalWindow
+    toggleModalWindow(openModal);
   }
 };
 
 editButton.addEventListener("click", function () {
-  togglePopup(form);
-  document.addEventListener("keyup", keyupHandler);
+  toggleModalWindow(form);
 });
 
-function togglePopup(editButton) {
-  editButton.classList.toggle("modal_open");
-  if (!modal.classList.contains("modal_open")) {
-    document.removeEventListener("keyup", keyupHandler);
-  }
-}
 
 // закрытие по клику на overlay 
 
 modal.addEventListener("click", function (e) {
   if (!e.target.closest(".modal__container")) {
-    togglePopup(modal);
+    toggleModalWindow(modal);
   }
   document.removeEventListener("keyup", keyupHandler);
 });
@@ -110,6 +107,7 @@ const cardsData = [
   },
 ];
 
+
 let photoGrid = document.querySelector(".photo-grid");
 let template = document.querySelectorAll("template");
 
@@ -123,6 +121,14 @@ function generateCard(link, text) {
   deleteButton.addEventListener("click", function () {
     deleteButton.closest(".photo-card").remove();
   });
+
+  // что делать когда кликаем по картинке
+  image.addEventListener("click", function () {
+    modalImage.src = link;
+    modalText.textContent = text;
+    modalAddImage.classList.toggle("modal_open");
+  });
+
   photoGrid.append(clon);
 }
 
@@ -135,10 +141,14 @@ cardsData.forEach((card) => {
 modalClosedButton.addEventListener("click", function () {
   userNameInput.value = userTitle.textContent;
   userJobInput.value = userSubtitle.textContent;
-  toggleModalWindow();
+  
+  // нужно передавать что открыть и что закрывать
+  toggleModalWindow(modalEdit);
 });
 
-editButton.addEventListener("click", toggleModalWindow);
+editButton.addEventListener("click", () => {
+  toggleModalWindow(modalEdit);
+});
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -149,7 +159,14 @@ form.addEventListener("submit", function (e) {
   modal.classList.remove("modal_open");
 });
 
-function toggleModalWindow() {
+function toggleModalWindow(modal) {
+  // проверяем, что если модалка открыта  и иы ее закрываем, то отписываемся
+  if(modal.classList.contains('modal_open')) {
+    document.removeEventListener("keyup", keyupHandler);
+  } else {
+    // если открываем, то подписываемся
+    document.addEventListener("keyup", keyupHandler);
+  }
   modal.classList.toggle("modal_open");
 }
 
@@ -157,21 +174,23 @@ function toggleModalWindow() {
 
 const likes = document.querySelectorAll(".photo-card__button");
 likes.forEach((like) => {
-like.addEventListener ("click", function(){
-like.classList.toggle("photo-card__button_active");
-
-});
+  like.addEventListener("click", function () {
+    like.classList.toggle("photo-card__button_active");
+  });
 })
 
 // показ фотки
-// const text = document.querySelector(".photo-card__title");
-// const images = document.querySelectorAll(".photo-card__photo");
-// const modalImage = document.querySelector(".modal__image");
-// const modalText = document.querySelector(".modal__text");
+const imageTitle = document.querySelector(".photo-card__title");
+const images = document.querySelectorAll(".photo-card__photo");
+const modalImage = document.querySelector(".modal__image");
+const modalText = document.querySelector(".modal__text");
+
+// Перенесем этот код в создание карточки, будем подписываться на клик на картинку при создании
 // images.forEach((image) => {
 //   image.addEventListener ("click", function() {
 //     modalAddImage.classList.toggle("modal_open");
-//     modalText.textContent = text.textContent;
+//     modalText.textContent = imageTitle.textContent;
+//     modalImage.src = image.src;
 //   });
 // });
 
@@ -179,25 +198,19 @@ like.classList.toggle("photo-card__button_active");
 
 const modalAdd = document.querySelector(".modal_type_addcard");
 const addButton = document.querySelector(".intro__add-button");
-addButton.addEventListener ("click", function(){
+
+addButton.addEventListener("click", function () {
   modalAdd.classList.toggle("modal_open");
 });
 
 addButton.addEventListener("click", function () {
-  togglePopup(form);
+  toggleModalWindow(form);
   document.addEventListener("keyup", keyupHandler);
 });
-
-function togglePopup(addButton) {
-  addButton.classList.toggle("modal_open");
-  if (!modalAdd.classList.contains("modal_open")) {
-    document.removeEventListener("keyup", keyupHandler);
-  }
-}
-
 modalAdd.addEventListener("click", function (e) {
   if (!e.target.closest(".modal__container")) {
-    togglePopup(modalAdd);
+    toggleModalWindow(modalAdd);
   }
-  document.removeEventListener("keyup", keyupHandler);
 });
+
+

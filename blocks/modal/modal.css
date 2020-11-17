@@ -20,8 +20,14 @@
   border-radius: 10px;
 }
 
+
+
 .modal__description {
   padding: 34px 36px;
+}
+
+.modal__description_image {
+  padding: 0;
 }
 
 .modal__closed-button {
@@ -86,6 +92,24 @@
 
 .modal__save-button:hover {
   opacity: 0.6;
+}
+
+.modal__image {
+  width: 400px;
+height: 450px;
+object-fit: cover;
+}
+
+.modal__text {
+  font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+color: #FFFFFF;
+margin: 0;
+margin-top: 10px;
+}
+.modal__container_image {
+background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
