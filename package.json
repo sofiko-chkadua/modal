@@ -2,7 +2,7 @@
   "private": true,
   "name": "sprint_8",
   "version": "0.0.1",
-  "description": "Yandex.Praktikum canonical projects",
+  "description": "Webpack config",
   "scripts": {
     "hint": "htmlhint src/index.html",
     "build": "rm -rf public && webpack",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://gitlab.com/pcr-web/canonical_ru-en_sprint8.git"
   },
-  "author": "Andrey Strogov",
+  "author": "-",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/pcr-web/canonical_ru-en_sprint8/issues"

@@ -38,7 +38,6 @@ let template = document.querySelectorAll("template");
 
 
 function toggleModalWindow(modal) {
-  console.log(modal)
   // проверяем, что если модалка открыта  и иы ее закрываем, то отписываемся
   if (modal.classList.contains('modal_open')) {
     document.removeEventListener("keyup", keyupHandler);
@@ -123,11 +122,33 @@ const keyupHandler = function (e) {
 
 // подписка на форму
 form.addEventListener("submit", function (e) {
-  console.log('form!')
   e.preventDefault();
   const name = userNameInput.value;
   const job = userJobInput.value;
   userTitle.textContent = name;
   userSubtitle.textContent = job;
   toggleModalWindow(modalEdit);
+});
+
+// закрытие по оверлэй
+
+modalEdit.addEventListener("click", function (e) {
+  if (!e.target.closest(".modal__container")) {
+    toggleModalWindow(modalEdit);
+  }
+  document.removeEventListener("keyup", keyupHandler);
+});
+
+modalAdd.addEventListener("click", function (e) {
+  if (!e.target.closest(".modal__container")) {
+    toggleModalWindow(modalAdd);
+  }
+  document.removeEventListener("keyup", keyupHandler);
+});
+
+modalAddImage.addEventListener("click", function (e) {
+  if (!e.target.closest(".modal__container")) {
+    toggleModalWindow(modalAddImage);
+  }
+  document.removeEventListener("keyup", keyupHandler);
 });

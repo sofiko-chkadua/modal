@@ -117,6 +117,12 @@ background-color: transparent;
     padding: 25px 22px;
   }
 
+  .modal__image {
+    width: 300px;
+  height: 350px;
+  
+  }
+
   .modal__title {
     font-size: 18px;
     line-height: 22px;
