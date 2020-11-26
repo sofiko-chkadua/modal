@@ -43,7 +43,7 @@ const cardsData = [
       text: "Tirol",
     },
     {
-      link: "./image/alpi.jpg",
+      link: "../image/alpi.jpg",
       text: "Alps",
     },
     {
