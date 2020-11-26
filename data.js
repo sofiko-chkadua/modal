@@ -1,6 +1,6 @@
 const cardsData = [
     {
-      link: "image/geo.jpg",
+      link: "../image/geo.jpg",
       text: "Svaneti",
     },
   
