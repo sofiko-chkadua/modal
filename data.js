@@ -5,41 +5,41 @@ const cardsData = [
     },
   
     {
-      link: "./image/moscow.jpg",
+      link: "../image/moscow.jpg",
       text: "Moscow",
     },
     {
-      link: "./image/perudja.jpg",
+      link: "../image/perudja.jpg",
       text: "Perujia",
     },
     {
-      link: "./image/Toskana.jpg",
+      link: "../image/Toskana.jpg",
       text: "Toskana",
     },
   
     {
-      link: "./image/italy.jpg",
+      link: "../image/italy.jpg",
       text: "Siena",
     },
     {
-      link: "./image/waffle.jpg",
+      link: "../image/waffle.jpg",
       text: "Vienne",
     },
   
     {
-      link: "./image/pisa.jpg",
+      link: "../image/pisa.jpg",
       text: "Pisa",
     },
     {
-      link: "./image/breakfast.jpg",
+      link: "../image/breakfast.jpg",
       text: "Best breakfast in Umbria",
     },
     {
-      link: "./image/flor.jpg",
+      link: "../image/flor.jpg",
       text: "Florence",
     },
     {
-      link: "./image/apl.jpg",
+      link: "../image/apl.jpg",
       text: "Tirol",
     },
     {
@@ -47,19 +47,19 @@ const cardsData = [
       text: "Alps",
     },
     {
-      link: "./image/rome.jpg",
+      link: "../image/rome.jpg",
       text: "Rome",
     },
     {
-      link: "./image/alps.jpg",
+      link: "../image/alps.jpg",
       text: "Austria",
     },
     {
-      link: "./image/prague.jpg",
+      link: "../image/prague.jpg",
       text: "Prague",
     },
     {
-      link: "./image/fugen.jpg",
+      link: "../image/fugen.jpg",
       text: "Fugen",
     },
   ];
